@@ -26,7 +26,7 @@ defmodule Elixirator.FuelCalculator do
     total = mass * gravity * 0.042 - 33
 
     cond do
-      total > 0 -> total | Float.floor()
+      total > 0 -> total |> trunc()
       true -> 0
     end
   end
@@ -35,7 +35,7 @@ defmodule Elixirator.FuelCalculator do
     total = mass * gravity * 0.033 - 42
 
     cond do
-      total > 0 -> total |> Float.floor()
+      total > 0 -> total |> trunc()
       true -> 0
     end
   end
@@ -46,7 +46,7 @@ defmodule Elixirator.FuelCalculator do
 
   def calculate_additional_fuel(total, move, acc) when total > 0 do
     total = calculate(total, move)
-    calculate_additional_fuel(total, move, Decimal.add(acc, total))
+    calculate_additional_fuel(total, move, acc + total)
   end
 
   def calculate_additional_fuel(_total, _move, acc), do: acc
