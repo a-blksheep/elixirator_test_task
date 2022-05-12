@@ -21,3 +21,4 @@ Were this a real-world application there are several other points, I would have 
 
 - The introduction of [Decimal](https://hexdocs.pm/decimal/readme.html)
 - Better testing
+- Would have added code quality packages. EG: Credo, etc
