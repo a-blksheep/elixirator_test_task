@@ -1,21 +1,23 @@
 # Elixirator.FuelCalculator
 
-**TODO: Add description**
+Test task for Elixirator backend position.
 
-## Installation
+## Running the application
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `elixirator_test_task` to your list of dependencies in `mix.exs`:
+After checking out the code and from an iex session run:
 
-```elixir
-def deps do
-  [
-    {:elixirator_test_task, "~> 0.1.0"}
-  ]
-end
-```
+`iex> Elixirator.FuelCalculator.calculate(28801, [{:land, 9.807}])`
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/elixirator_test_task>.
+## Tests
 
+I've added some initial doctests in the calculator which can be called
+using
+
+`mix test`
+
+## Additional Considerations
+
+Were this a real-world application there are several other points, I would have taken into account:
+
+- The introduction of [Decimal](https://hexdocs.pm/decimal/readme.html)
+- Better testing
